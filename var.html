@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Calc()</title>
+    <style>
+        /* ":root" -> Usado para colocar as variáveis */
+        :root{
+            --header-height: 15rem;
+            --font-elements: 2.0rem;
+        }
+        html{
+            font-size: 62.5%; /* Deixa os rem e em equivalente a 10px */
+            height: 100%;
+        }
+        header{
+            background-color: rgba(165, 42, 42, 0.4);
+            color: black;
+            width: 100%;
+            height: var(--header-height);
+            font-size: var(--font-elements); /* Colocar a casa decimal quando for Tamanho de Fonte */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        main{
+            background-color: #ccc;
+            margin-top: var(--header-height);
+            /* Mantém a proporção do elemento */
+            min-height: calc(100vh - var(--header-height) - 2rem);
+            font-size: var(--font-elements);
+        }
+        footer{
+            background-color: blue;
+            color: white;
+            height: 10rem;
+            font-size: var(--font-elements);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Header</p>
+        <a href="/index.html">Voltar</a>
+    </header>
+    <main>Main</main>
+    <footer>Footer</footer>
+</body>
+</html>

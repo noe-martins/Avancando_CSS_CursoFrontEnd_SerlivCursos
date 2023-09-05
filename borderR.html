@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <style>
+        :root{
+            --tamanho--elemento: 25rem;
+            --tamanho-font: 3.0em;
+        }
+        html,body{
+            height: 100%;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        a{
+            background-color: #252525;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            text-decoration: none;
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 50%; /* Independente do Tamanho, com a proporção 50% ela faz um círculo e não consegue mais que isso */
+        }
+        .text{
+            text-align: center;
+        }
+        .quadrado{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quadrado_arredondado{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 10%; /* Cria-se pontos com circunferências nas quatro pontas do Quadrado */
+        }
+        .circulo{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 50%; /* Independente do Tamanho, com a proporção 50% ela faz um círculo e não consegue mais que isso */
+        }
+        .circulos_varios_pontos{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 10px 50px 30px 100px; /* Segue o mesmo sentido horário do padding */
+        }
+        .elipses{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 30px / 80px; /* 10px -> Distância horizontal | 50px -> Distância Vertical */
+        }
+        .elipses_varios_pontos{
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+            font-size: var(--tamanho-font);
+            width: var(--tamanho--elemento);
+            height: var(--tamanho--elemento);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* PONTO IMPORTANTE */
+            border-radius: 30px / 80px 50px 100px 10px; /* Manteve a distância horizontal e mudou as verticais em cada ponto */
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado">Quadrado</div>
+    <div class="quadrado_arredondado"><div class="text">Quadrado Arredondado</div></div>
+    <div class="circulo"><div class="text">Circulo</div></div>
+    <div class="circulos_varios_pontos"><div class="text">Em vários pontos</div></div>
+    <div class="elipses"><div class="text">Elipses</div></div>
+    <div class="elipses_varios_pontos"><div class="text">Elipses em vários pontos</div></div>
+    <footer><a href="/index.html">Voltar</a></footer>
+</body>
+</html>

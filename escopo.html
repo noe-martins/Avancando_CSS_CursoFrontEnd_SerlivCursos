@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variáveis</title>
+    <style>
+        /* A tag <h1> muda de cor de acordo com o escopo em que ela está inserida */
+        :root{
+            --color: red;
+        }
+        html{
+            font-size: 200%;
+        }
+        h1{
+            color: var(--color);
+        }
+        .container{
+            --color: blue;
+        }
+        .container__text{
+            --color: brown;
+        }
+    </style>
+</head>
+<body>
+    <header><a href="/index.html">Voltar</a></header>
+    <!-- Geral -->
+    <h1>Texto 1</h1>
+    <!-- Container -->
+    <div class="container">
+        <h1>Texto 2</h1>
+        <!-- Container 2 -->
+        <div class="container__text">
+            <h1>Texto 3</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade de medida</title>
+    <style>
+        :root {
+            --espaco: 20px;
+        }
+        html {
+            /* Essa é uma técnica para facilitar a aplicação de medidas relativas */
+            font-size: 62.5%;
+            padding-bottom: 500px;
+        }
+        h1{
+            /* É um unidade de medida relativa a tag pai, no caso <html> */
+            /* Aqui o tamanho da fonte ficou equivalente a 30px */
+            font-size: 3.0em;   
+        }
+        h2{
+            font-size: 2.0rem;
+            width: 60%;
+            text-align: center;
+        }
+        p{
+            /* Tamanho de 16px */
+            font-size: 1.6rem;
+        }
+        b{
+            color: blueviolet;
+            /* É uma unidade de medida relativa a tag root, ou seja diretamente a tag
+            <html>. Essa é a mais usada */
+            /* Tamanho de 20px */
+            font-size: 2.0rem;
+        }
+        .padding{
+            background-color: brown;
+        }
+        .padding p{
+            color: white;
+            background-color: blue;
+            width: fit-content;
+            /* Isso permite o padding do elemento aumente proporcionalmente com o
+            font-size */
+            padding: 1em; /* Aqui o "em" está herdando o tamanho da tag <p> */
+            font-size: 20px;
+        }
+        .viewport-container{
+            background-color: brown;
+            width: 60%;
+            height: 200px;
+            /* margin-bottom: var(--espaco); */
+        }
+        .viewport-container__porcentagem{
+            background-color: blue;
+            color: white;
+            /* Aqui a largura e altura é relativa ao elemento pai (.viewport-container) */
+            width: 50%;
+            height: 50%;
+        }
+        .viewport-container__vw_vh{
+            border: 2px solid blue;
+            color: white;
+            /* Aqui a largura e a altura ficam relativas a viewport (<html>) */
+            width: 70vw;
+            /* height: 70vw; */
+        }
+        .ch{
+            background-color: brown;
+            color: white;
+            /* "ch" mantém a legiblidade. 20ch = 20 caracteres. Se eu aumento
+            a fonte a legibilidade de 20 caracteres é mantida */
+            width: 20ch;
+            font-size: 1.6em;
+            padding: 10px;
+            /* margin-bottom: var(--espaco); */
+        }
+        .link_aula{
+            display: inline-block;
+            font-size: 1.6rem;
+            background-color: brown;
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            /* margin-bottom: var(--espaco); */
+        }
+        .link_aula:hover{
+            background-color: black;
+        }
+        hr{
+            margin-top: var(--espaco);
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 73 - Unidade de Medida</h1>
+    <p>Lorem ipsum dolor sit <b>amet consectetur</b> adipisicing elit. 
+        Nostrum at inventore quia corporis eveniet quibusdam porro alias distinctio 
+        rem facere earum consequatur eos dolores, optio recusandae? Recusandae eius 
+        atque provident!</p>
+    <hr>
+    <h1>Aula 74 - "em" e "font-size" - Proporção</h1>
+    <div class="padding">
+        <p>Espaço de padding</p>
+    </div>
+    <hr>
+    <h1>Aula 76 - "vw" e "vh"</h1>
+    <h2>Usando a %</h2>
+    <div class="viewport-container">
+        <div class="viewport-container__porcentagem">Viewport</div>
+    </div>
+    <h2>Usando as "vw" e "vh"</h2>
+    <div class="viewport-container">
+        <div class="viewport-container__vw_vh">Viewport</div>
+    </div>
+    <hr>
+    <h1>Aula 77 - Unidade "ch"</h1>
+    <div class="ch">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nemo 
+        nulla eos minus perferendis aliquam cupiditate tempore perspiciatis 
+        cumque repellat.
+    </div>
+    <hr>
+    <h1>Aula 78 - Função "calc()"</h1>
+    <a class="link_aula" href="/calc.html">Link do Exercício da Aula</a>
+    <hr>
+    <h1>Aula 79 - Variáveis CSS (custom propeties)</h1>
+    <a class="link_aula" href="/var.html">Link do Exercício da Aula</a>
+    <hr>
+    <h1>Aula 80 - Escopo de Variáveis</h1>
+    <a class="link_aula" href="/escopo.html">Link do Exercício da Aula</a>
+    <hr>
+    <h1>Aula 81 - Border Radius</h1>
+    <a class="link_aula" href="/borderR.html">Link do Exercício da Aula</a>
+    <hr>
+    
+</body>
+</html>
