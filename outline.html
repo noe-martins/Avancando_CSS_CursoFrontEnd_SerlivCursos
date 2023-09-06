@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline</title>
+    <style>
+        html,body{
+            font-size: 62.5%;
+            height: 100%;
+        }
+        body{
+            background-color: orangered;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        a{
+            font-size: 3.0rem;
+        }
+        h1{
+            font-size: 5.0rem;
+        }
+        .border{
+            background-color: white;
+            width: 40rem;
+            height: 20rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* PONTO IMPORTANTE */
+            /* Altera o tamanho dos elementos */
+            border: 5px solid #4800f2;
+        }
+        .border:hover{
+            border-width: 10px;
+        }
+        .outline{
+            background-color: white;
+            width: 40rem;
+            height: 20rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* PONTO IMPORTANTE */
+            /* Não altera os tamanho dos elementos */
+            outline: 5px solid #4800f2;
+        }
+        .outline:hover{
+            outline-width: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header><a href="/index.html">Voltar</a></header>
+    <div class="border"><h1>Border</h1></div>
+    <div class="outline"><h1>Outline</h1></div>
+</body>
+</html>
