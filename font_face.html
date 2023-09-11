@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte Face</title>
+    <style>
+        html,body{
+            font-size: 62.5%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: orangered;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Criando uma fonte com o nome Nadia */
+        @font-face{
+            /* Nome da familia de fonte */
+            font-family: nadia;
+            /* Enderço do local da fonte */
+            src:
+                /* Aqui verifica se no sistema operacional do usuário tem a fonte e como ela possivelmente estará */
+                local("Nadia Serif"),
+                local("Nadia-Serif"),
+                /* ttf -> Formato padrão mais utilizado | truetype -> Informa ao navagador o que ele já vai procurar */
+                url(fonts/nadia/nadia-serif.ttf) format("truetype"),
+                /* woff -> Formato para navegadores super modernos */
+                url(fonts/nadia/nadia-serif.woff) format("woff"),
+                /* svg -> Formato antigo */
+                url(fonts/nadia/nadia-serif.svg) format("svg");
+        }
+        /* Baixando fonte do "Font Squirrel" e aplicando aqui */
+        @font-face{
+            font-family: AlexBrush;
+            src:
+                local("AlexBrush-Regular"),
+                url(fonts/alex-brush/AlexBrush-Regular.ttf) format("truetype");
+        }
+        .menu{
+            background-color: rgba(0, 0, 0, .5);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .menu-opcoes{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        .menu-opcoes a{
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            font-size: 2.0rem;
+            font-weight: bold;
+            padding: 1.8rem 5.0rem;
+            border-radius: 5px;
+        }
+        .menu-opcoes a:hover{
+            background-color: white;
+            color: black;
+        }
+        h1{
+            font-size: 7.0rem;
+            font-weight: bold;
+            color: white;
+        }
+        /* Aplicações das Fontes do font-face */
+        .font_nadia{
+            font-family: nadia;
+        }
+        .font_alex{
+            font-family: AlexBrush;
+        }
+        footer{
+            background-color: rgba(0, 0, 0, .5);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            padding: 2rem;
+        }
+        .footer_voltar{
+            color: white;
+            margin-left: 5rem;
+            font-size: 3.0rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul class="menu-opcoes">
+            <li><a class="menu-opcoes_csstricks" href="https://css-tricks.com/snippets/css/using-font-face-in-css/">CSS Tricks</a></li>
+            <li><a class="menu-opcoes_fontsquirrel" href="https://www.fontsquirrel.com/">Font Squirrel</a></li>
+        </ul>
+    </nav>
+    <h1 class="font_nadia">Nadia</h1>
+    <h1 class="font_alex">AlexBrush</h1>
+    <footer>
+        <a class="footer_voltar" href="/index.html">Voltar</a>
+    </footer>
+</body>
+</html>
