@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte Face</title>
+    <style>
+        :root{
+            --width-div: 700px;
+        }
+        html,body{
+            font-size: 62.5%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: orangered;
+            margin: 0;
+            /* display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; */
+        }
+        .menu{
+            background-color: rgba(0, 0, 0, .5);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            height: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .menu-opcoes{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        .menu-opcoes a{
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            font-size: 2.0rem;
+            font-weight: bold;
+            padding: 1.8rem 5.0rem;
+            border-radius: 5px;
+        }
+        .menu-opcoes a:hover{
+            background-color: white;
+            color: black;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10rem;
+            margin-bottom: 50px;
+            min-height: calc(100vh - 10rem);
+        }
+        h1{
+            font-size: 7.0rem;
+            font-weight: bold;
+            color: white;
+        }
+        footer{
+            background-color: rgba(0, 0, 0, .5);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            /* padding: 2rem; */
+            height: 5rem;
+            margin-top: 500px;
+        }
+        .footer_voltar{
+            color: white;
+            margin-left: 5rem;
+            font-size: 3.0rem;
+        }
+        .duration{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Defino em qual propriedade númerica irei aplicar o transition */
+            transition-property: width;
+            /* Define o tempo que irá acontecer a animação */
+            transition-duration: .5s;
+        }
+        .duration:hover{
+            width: var(--width-div);
+        }
+        .timing-function{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: .5s;
+            /* Vai na mesma velocidade do início ao fim */
+            transition-timing-function: linear;
+        }
+        .timing-function:hover{
+            width: var(--width-div);
+        }
+        .timing-function_ease{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: .5s;
+            /* Vai rápido e no final dá uma desacelerada */
+            transition-timing-function: ease;
+        }
+        .timing-function_ease:hover{
+            width: var(--width-div);
+        }
+        .timing-function_ease-in{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: .5s;
+            /* Vai devagar e no final acelera */
+            transition-timing-function: ease-in;
+        }
+        .timing-function_ease-in:hover{
+            width: var(--width-div);
+        }
+        .timing-function_ease-out{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: .5s;
+            /* Vai rápido e no final desacelera */
+            transition-timing-function: ease-out;
+        }
+        .timing-function_ease-out:hover{
+            width: var(--width-div);
+        }
+        .timing-function_ease-in-out{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: .5s;
+            /* Vai rápido no começo e no final desacelera */
+            transition-timing-function: ease-in-out;
+        }
+        .timing-function_ease-in-out:hover{
+            width: var(--width-div);
+        }
+        .timing-function_cubic-bezier{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: 1s;
+            /* Faz a animação de acordo com os calculos do site no menu */
+            transition-timing-function: cubic-bezier(.87,-0.82,.37,1.66);
+        }
+        .timing-function_cubic-bezier:hover{
+            width: var(--width-div);
+        }
+        .timing-function_cubic-bezier-delay{
+            background-color: white;
+            color: black;
+            font-size: 3.0rem;
+            text-align: center;
+            width: 250px;
+            height: 150px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: width;
+            transition-duration: 1s;
+            /* Faz a animação de acordo com os calculos do site no menu */
+            transition-timing-function: cubic-bezier(.87,-0.82,.37,1.66);
+            /* Dá um delay para começar a animação */
+            transition-delay: .5s;
+        }
+        .timing-function_cubic-bezier-delay:hover{
+            width: var(--width-div);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul class="menu-opcoes">
+            <li><a class="menu-opcoes_csstricks" href="https://cubic-bezier.com">Cubic Bezier</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="duration">Duration</div>
+        <div class="timing-function">Timing Function (Linear)</div>
+        <div class="timing-function_ease">Timing Function (Ease)</div>
+        <div class="timing-function_ease-in">Timing Function (Ease-in)</div>
+        <div class="timing-function_ease-out">Timing Function (Ease-out)</div>
+        <div class="timing-function_ease-in-out">Timing Function (Ease-in-out)</div>
+        <div class="timing-function_cubic-bezier">Timing Function (Cubic Bezier)</div>
+        <div class="timing-function_cubic-bezier-delay">Timing Function (Cubic Bezier) c/ delay</div>
+    </main>
+    <footer>
+        <a class="footer_voltar" href="/index.html">Voltar</a>
+    </footer>
+</body>
+</html>
